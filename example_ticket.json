@@ -1,0 +1,15 @@
+{
+    "fields": {
+       "project": { 
+         "key": ""
+       },
+       "summary": "",
+       "description": "",
+       "issuetype": {
+          "name": "Task"
+       },
+       "assignee": {
+         "name": ""
+       }
+   }
+}

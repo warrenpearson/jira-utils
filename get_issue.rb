@@ -8,6 +8,7 @@ class GetIssue
   def initialize
     user = ENV['JIRA_USER']
     pass = ENV['JIRA_PASS']
+    @domain = ENV['JIRA_DOMAIN']
 
     unless user && pass
       puts 'User and password must be set'
@@ -25,7 +26,7 @@ class GetIssue
   end
 
   def issue_url(ticket)
-    base_url = 'https://<companyname>.atlassian.net'
+    base_url = "https://#{@domain}.atlassian.net"
     issue_endpoint = '/rest/api/2/issue/'
 
     base_url + issue_endpoint + ticket
